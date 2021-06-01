@@ -1,1 +1,133 @@
+Python
+列表list[]
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+:  List[int]   : int     -> List[int]
+表示形参和函数返回值类型，因为python 是弱类型变量。函数的参数和return值是没有强制类型限制。
+
+hash = dict()  创建字典
+
+for i,num in enumerate(nums): 创建序列
+
+if target-num in hash:
+
+return [hash[target-num],i]	[]拼接列表
+
+hash[nums[i]]=i
+
+return[]
+
+
+
+C++
+输入输出
+1 多组输入数据，且不说明多少组，直到读至输入文件末尾为止
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b;
+while(cin>>a>>b)
+cout<<a+b<<endl;
+return 0;
+}
+2 多组输入数据，不说明多少组，以某特殊输入为结束标志。
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b;
+while(cin>>a>>b)
+{
+if(a==&&b==)
+break;
+cout<<a+b<<endl;
+}
+return ;
+}
+当读入的a与b同时为0时，程序终止；
+
+3 多组输入数据，开始输入一个T，接下来是T组数据
+#include<iostream>
+using namespace std;
+int main()
+{
+int T;
+int a,b;
+cin>>T;
+while(T--)
+{
+cin>>a>>b;
+cout<<a+b<<endl;
+}
+return ;
+}
+输出处理
+1.空行After
+cout<<sum<<endl;
+cout<<endl;
+
+2.空行Between
+int a;
+bool bFirst = true;
+while (scanf("%d", &a) == 1)
+{
+if (!bFirst)
+puts("");
+else
+bFirst = false;
+printf("%d\n", a);
+}
+
+链表：
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+
+ListNode *head =nullptr, *tail =nullptr;	创建
+int n = head? head ->val:0;				指针非空时赋值
+head=tail=new ListNode(sum%10); 			调用方法
+tail=tail->next;							移动指针
+return head;								返回链表
+ListNode* dummy = new ListNode(0, head); 	创建指向头结点的节点
+
+vector
+sort(input.begin(), input.end() )			直接调用#include <algorithm>
+vector<int>{input.begin(),(input.begin()+k)}	 vector<int>{}截取一段vector
+vector.pushback
+//方法二，使用迭代器将容器中数据输出 
+vector<int>::iterator it;//声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素 
+for(it=obj.begin();it!=obj.end();it++) 
+{ 
+cout<<*it<<" "; 
+} return 0;
+
+数组
+int a[1001] = { 0 };
+
+队列
+queue<int> que
+q.push(i)
+q.pop()
+q.front()
+q.size()
+map
+使用count，返回的是被查找元素的个数。如果有，返回1；否则，返回0。注意，map中不存在相同元素，所以返回值只能是1或0。
+使用find，返回的是被查找元素的位置，没有则返回map.end()。
+String
+str=str.substr(1,2)+str.substr(4,5);  
+//拼接  4,5指的是从4开始后面5个
+s1.swap(s2);交换
+string s2 = s1.substr(2, 4);子串
+
+auto &x:num;
+迭代器等同于
+vector<int> num;
+for(vector<int>::iterator iter=num.begin(); iter!=num.end(); iter++)
+
+char-‘0’转换成数字的char类型
+
+npos可以表示string的结束位子，是string::type_size 类型的，也就是find（）返回的类型。find函数在找不到指定值得情况下会返回string::npos
+
 
